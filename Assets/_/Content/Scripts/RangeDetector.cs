@@ -1,22 +1,17 @@
+// RangeDetector.cs
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RangeDetector : MonoBehaviour
 {
-    #region Public Members
     public float m_rangeDetector;
-    //public LayerMask m_coinLayer; // définir cela pour le calque contenant les coins
-    #endregion
+    public GameObject explosionPrefab;
 
-    #region Private Members
-    [SerializeField]
     private List<GameObject> m_EnemiesToFind = new List<GameObject>();
-    [SerializeField]
     private List<GameObject> m_EnemiesFind = new List<GameObject>();
-    #endregion
 
-    #region Unity API
     private void Awake()
     {
         GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -34,11 +29,24 @@ public class RangeDetector : MonoBehaviour
             float distance = Vector3.Distance(transform.position, Enemy.transform.position);
             if (distance <= m_rangeDetector)
             {
+
+                Renderer enemyRenderer = Enemy.GetComponent<Renderer>();
+                if (enemyRenderer != null)
+                {
+                    enemyRenderer.enabled = false;
+                }
+
                 m_EnemiesFind.Add(Enemy);
                 m_EnemiesToFind.RemoveAt(i);
-                //Destroy(coin); 
-                Enemy.SetActive(false);
                 Debug.Log(Enemy.name + "C'EST LA GUERRE");
+
+                GameObject explosionInstance = Instantiate(explosionPrefab, Enemy.transform.position, Quaternion.identity);
+                if (explosionInstance != null)
+                {
+                    Destroy(explosionInstance, 1f);
+                }
+
+                
             }
         }
     }
@@ -48,5 +56,4 @@ public class RangeDetector : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, m_rangeDetector);
     }
-    #endregion
 }
