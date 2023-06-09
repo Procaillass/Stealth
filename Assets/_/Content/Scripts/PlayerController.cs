@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private bool canBeActivated = true;
 
     private SphereCollider sphereCollider;
+    private float _cooldownTimer = 0f;
+    private const float CooldownDuration = 12f; // The cooldown duration in seconds
 
     private void Start()
     {
@@ -29,6 +31,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire3") && canBeActivated)
         {
             StartCoroutine(ActivateSpecialPower());
+        }
+
+        if (!canBeActivated)
+        {
+            _cooldownTimer += Time.deltaTime;
+            if (_cooldownTimer >= CooldownDuration)
+            {
+                _cooldownTimer = 0f;
+                canBeActivated = true;
+            }
         }
 
         float deltaX = Input.GetAxis("Horizontal");
@@ -87,9 +99,21 @@ public class PlayerController : MonoBehaviour
         rangeDetector.enabled = false;
         sphereCollider.enabled = false;
 
-        yield return new WaitForSeconds(6f);
+        
 
         // Can now be activated again
-        canBeActivated = true;
+        
+    }
+    private void OnGUI()
+    {
+        if (!canBeActivated)
+        {
+            float timeRemaining = CooldownDuration - _cooldownTimer;
+            GUI.Label(new Rect(20, 200, 2000, 20), $"Special Power Cooldown: {timeRemaining:0.0}s");
+        }
+        else
+        {
+            GUI.Label(new Rect(20, 200, 200, 20), "Special Power Ready!");
+        }
     }
 }

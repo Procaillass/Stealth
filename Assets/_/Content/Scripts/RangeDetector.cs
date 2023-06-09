@@ -26,15 +26,18 @@ public class RangeDetector : MonoBehaviour
         for (int i = m_EnemiesToFind.Count - 1; i >= 0; i--)
         {
             GameObject Enemy = m_EnemiesToFind[i];
+
+            if (Enemy == null)
+            {
+                m_EnemiesToFind.RemoveAt(i);
+                continue;
+            }
+
+
             float distance = Vector3.Distance(transform.position, Enemy.transform.position);
             if (distance <= m_rangeDetector)
             {
-
-                Renderer enemyRenderer = Enemy.GetComponent<Renderer>();
-                if (enemyRenderer != null)
-                {
-                    enemyRenderer.enabled = false;
-                }
+                Enemy.SetActive(false);
 
                 m_EnemiesFind.Add(Enemy);
                 m_EnemiesToFind.RemoveAt(i);

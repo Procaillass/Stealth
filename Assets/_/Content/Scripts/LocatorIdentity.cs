@@ -48,7 +48,7 @@ public class LocatorIdentity : MonoBehaviour
     {
         if (HasReachedDestination())
         {
-            MoveToNextLocation();
+             MoveToLocation();
         }
     }
 
