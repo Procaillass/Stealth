@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6050998851335155003
+--- !u!114 &-1482995414549160811
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: 
   VirtualCamera:
-    exposedName: 6b0dc7319c665c348b19b558a14b88a3
+    exposedName: 234164dc4ac131e4cbb0415a544a2d0f
     defaultValue: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -62,13 +62,13 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 6523221406288795934}
-    m_Duration: 106.56666666666666
+    m_Duration: 45.666666666666664
     m_TimeScale: 1
     m_ParentTrack: {fileID: 3153260894869676700}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 5.816666666666663
+    m_BlendOutDuration: 6.599999999999994
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -128,84 +128,15 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: VirtualCam
   - m_Version: 1
-    m_Start: 100.75
+    m_Start: 39.06666666666667
     m_ClipIn: 0
-    m_Asset: {fileID: 8801568026437074456}
-    m_Duration: 24.65128324739635
+    m_Asset: {fileID: -1482995414549160811}
+    m_Duration: 22.93333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: 3153260894869676700}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 5.816666666666663
-    m_BlendOutDuration: 5.967949914063013
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: VirtualCam
-  - m_Version: 1
-    m_Start: 119.43333333333334
-    m_ClipIn: 0
-    m_Asset: {fileID: -6050998851335155003}
-    m_Duration: 19.849999999999994
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 3153260894869676700}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: 5.967949914063013
+    m_BlendInDuration: 6.599999999999994
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -264,7 +195,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: VirtualCam2
+    m_DisplayName: FreeLookCamPlayer
   m_Markers:
     m_Objects: []
 --- !u!114 &6523221406288795934
@@ -282,20 +213,4 @@ MonoBehaviour:
   DisplayName: 
   VirtualCamera:
     exposedName: 7ab31aa5029fe8748b01ed913610a3b0
-    defaultValue: {fileID: 0}
---- !u!114 &8801568026437074456
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
-  m_Name: CinemachineShot
-  m_EditorClassIdentifier: 
-  DisplayName: 
-  VirtualCamera:
-    exposedName: 05b9eaee148a8324b8f7a3f9a284f9fe
     defaultValue: {fileID: 0}

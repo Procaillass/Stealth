@@ -57,12 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_\Content\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\_\Content\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\_\Content\Scripts\PlayerStateController.cs" />
     <Compile Include="Assets\_\Content\Scripts\PlayerControllerMario.cs" />
     <Compile Include="Assets\_\Content\Scripts\LocatorIdentity.cs" />
     <Compile Include="Assets\_\Content\Scripts\PlayerController.cs" />
     <Compile Include="Assets\_\Content\Scripts\LocatorSystem.cs" />
     <Compile Include="Assets\_\Content\Scripts\RangeDetector.cs" />
-    <Compile Include="Assets\_\Content\Scripts\PlayerStateController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
